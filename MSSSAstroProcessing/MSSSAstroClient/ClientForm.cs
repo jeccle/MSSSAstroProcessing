@@ -18,13 +18,6 @@ namespace MSSSAstroClient
             InitializeComponent();
         }
 
-        private void ClientForm_Load(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
         private void buttonStarDistance_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Client Started");
@@ -36,5 +29,6 @@ namespace MSSSAstroClient
             string infoStr = pipeProxy.StarVelocity(double.Parse(textBoxObserved.Text), double.Parse(textBoxRest.Text)).ToString();
             textBoxDisplay.Text = infoStr;
         }
+
     }
 }
