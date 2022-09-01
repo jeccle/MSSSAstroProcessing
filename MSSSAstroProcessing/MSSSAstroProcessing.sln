@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroDriver", "AstroDriver\AstroDriver.csproj", "{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroMath", "AstroMath\AstroMath.csproj", "{5F596B78-CBD1-478C-8AED-C508A2B88335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSSAstroServer", "MSSSAstroServer\MSSSAstroServer.csproj", "{73B30584-C360-49D5-A594-595AFE77BEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSSAstroClient", "MSSSAstroClient\MSSSAstroClient.csproj", "{B81FDC87-CE74-45C4-B28F-A962A73B0057}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6D667C1-66AB-4024-B2C7-0E90D152B82C}
+	EndGlobalSection
+EndGlobal

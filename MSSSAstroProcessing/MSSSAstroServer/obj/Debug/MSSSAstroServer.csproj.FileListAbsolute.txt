@@ -1,0 +1,11 @@
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\bin\Debug\MSSSAstroServer.exe.config
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\bin\Debug\MSSSAstroServer.exe
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\bin\Debug\MSSSAstroServer.pdb
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\bin\Debug\AstroMath.dll
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\bin\Debug\AstroMath.pdb
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.csproj.AssemblyReference.cache
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.csproj.SuggestedBindingRedirects.cache
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.csproj.CoreCompileInputs.cache
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.csproj.CopyComplete
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.exe
+D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroServer\obj\Debug\MSSSAstroServer.pdb
