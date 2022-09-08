@@ -1,7 +1,10 @@
 ﻿using AstroMath;
+using System.ServiceModel;
 
 namespace MSSSAstroServer
 {
+    // Investigate this
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     internal class AstroServer : IAstroContract
     {
         AstroCalculations astro = new AstroCalculations();

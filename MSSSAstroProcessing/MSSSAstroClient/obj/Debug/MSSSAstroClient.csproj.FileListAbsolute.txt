@@ -9,3 +9,14 @@ D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\M
 D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.exe
 D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.pdb
 D:\_Sem3\Complex Data Structures\AT2\MSSSAstroCalculations\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\MSSSAstroClient.pdb
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\MSSSAstroClient.exe.config
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\MSSSAstroClient.exe
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\MSSSAstroClient.pdb
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.csproj.AssemblyReference.cache
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.csproj.SuggestedBindingRedirects.cache
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.ClientForm.resources
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.Properties.Resources.resources
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.csproj.GenerateResource.cache
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.csproj.CoreCompileInputs.cache
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.exe
+D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.pdb
