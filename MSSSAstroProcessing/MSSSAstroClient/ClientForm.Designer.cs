@@ -52,7 +52,11 @@
             this.columnStarDistances = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKelvin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnEventHorizon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialogBox = new System.Windows.Forms.ColorDialog();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBoxInput.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -60,6 +64,10 @@
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxObserved
@@ -70,6 +78,7 @@
             this.textBoxObserved.TabIndex = 1;
             this.textBoxObserved.Text = "Observed:";
             this.textBoxObserved.Enter += new System.EventHandler(this.textBoxObserved_Enter);
+            this.textBoxObserved.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // buttonCalculate
             // 
@@ -89,6 +98,7 @@
             this.textBoxRest.TabIndex = 4;
             this.textBoxRest.Text = "Rest:";
             this.textBoxRest.Enter += new System.EventHandler(this.textBoxRest_Enter);
+            this.textBoxRest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBoxInput
             // 
@@ -97,7 +107,7 @@
             this.groupBoxInput.Controls.Add(this.buttonCalculate);
             this.groupBoxInput.Controls.Add(this.groupBox3);
             this.groupBoxInput.Controls.Add(this.groupBox4);
-            this.groupBoxInput.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxInput.Location = new System.Drawing.Point(6, 6);
             this.groupBoxInput.Name = "groupBoxInput";
             this.groupBoxInput.Size = new System.Drawing.Size(241, 150);
             this.groupBoxInput.TabIndex = 5;
@@ -120,6 +130,7 @@
             this.textBoxHorizon.Name = "textBoxHorizon";
             this.textBoxHorizon.Size = new System.Drawing.Size(100, 20);
             this.textBoxHorizon.TabIndex = 5;
+            this.textBoxHorizon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBox5
             // 
@@ -137,6 +148,7 @@
             this.textBoxKelvin.Name = "textBoxKelvin";
             this.textBoxKelvin.Size = new System.Drawing.Size(100, 20);
             this.textBoxKelvin.TabIndex = 5;
+            this.textBoxKelvin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBox3
             // 
@@ -165,6 +177,7 @@
             this.textBoxDistance.Name = "textBoxDistance";
             this.textBoxDistance.Size = new System.Drawing.Size(100, 20);
             this.textBoxDistance.TabIndex = 5;
+            this.textBoxDistance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBox2
             // 
@@ -172,9 +185,9 @@
             this.groupBox2.Controls.Add(this.comboBoxLang);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(12, 168);
+            this.groupBox2.Location = new System.Drawing.Point(8, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(179, 87);
+            this.groupBox2.Size = new System.Drawing.Size(346, 156);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "GUI Preferences";
@@ -187,6 +200,7 @@
             this.buttonStyle.TabIndex = 4;
             this.buttonStyle.Text = "Change Style";
             this.buttonStyle.UseVisualStyleBackColor = true;
+            this.buttonStyle.Click += new System.EventHandler(this.buttonStyle_Click);
             // 
             // comboBoxLang
             // 
@@ -218,7 +232,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 262);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 199);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(654, 22);
             this.statusStrip1.TabIndex = 7;
@@ -238,9 +252,9 @@
             this.columnKelvin,
             this.columnEventHorizon});
             this.listViewDisplay.HideSelection = false;
-            this.listViewDisplay.Location = new System.Drawing.Point(259, 16);
+            this.listViewDisplay.Location = new System.Drawing.Point(253, 11);
             this.listViewDisplay.Name = "listViewDisplay";
-            this.listViewDisplay.Size = new System.Drawing.Size(383, 243);
+            this.listViewDisplay.Size = new System.Drawing.Size(383, 146);
             this.listViewDisplay.TabIndex = 8;
             this.listViewDisplay.UseCompatibleStateImageBehavior = false;
             this.listViewDisplay.View = System.Windows.Forms.View.Details;
@@ -270,17 +284,54 @@
             this.columnEventHorizon.Text = "Event Horizon";
             this.columnEventHorizon.Width = 103;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(654, 194);
+            this.tabControl1.TabIndex = 9;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBoxInput);
+            this.tabPage1.Controls.Add(this.listViewDisplay);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(646, 168);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(646, 168);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 284);
-            this.Controls.Add(this.listViewDisplay);
+            this.ClientSize = new System.Drawing.Size(654, 221);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBoxInput);
             this.Name = "ClientForm";
             this.Text = "Malin Space Science Systems Astro Client";
+            this.Load += new System.EventHandler(this.ClientForm_Load);
             this.groupBoxInput.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
@@ -294,6 +345,10 @@
             this.groupBox2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,13 +373,17 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button buttonStyle;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialogBox;
         private System.Windows.Forms.ColumnHeader columnStarVelocity;
         private System.Windows.Forms.ColumnHeader columnStarDistances;
         private System.Windows.Forms.ColumnHeader columnKelvin;
         private System.Windows.Forms.ColumnHeader columnEventHorizon;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.ColumnHeader recordID;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 
