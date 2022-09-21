@@ -10,3 +10,9 @@ D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessin
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.csproj.CoreCompileInputs.cache
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.dll
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.pdb
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\bin\Debug\AstroMath.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\bin\Debug\AstroMath.pdb
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.csproj.AssemblyReference.cache
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.csproj.CoreCompileInputs.cache
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\AstroMath\obj\Debug\AstroMath.pdb
