@@ -14,23 +14,32 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DualStartup|Any CPU = DualStartup|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.DualStartup|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.DualStartup|Any CPU.Build.0 = Debug|Any CPU
 		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA37BEF-2E78-47A3-B15A-402469BBF6A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.DualStartup|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F596B78-CBD1-478C-8AED-C508A2B88335}.DualStartup|Any CPU.Build.0 = Debug|Any CPU
 		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F596B78-CBD1-478C-8AED-C508A2B88335}.Release|Any CPU.Build.0 = Release|Any CPU
 		{73B30584-C360-49D5-A594-595AFE77BEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73B30584-C360-49D5-A594-595AFE77BEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.DualStartup|Any CPU.ActiveCfg = Release|Any CPU
+		{73B30584-C360-49D5-A594-595AFE77BEF6}.DualStartup|Any CPU.Build.0 = Release|Any CPU
 		{73B30584-C360-49D5-A594-595AFE77BEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73B30584-C360-49D5-A594-595AFE77BEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.DualStartup|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.DualStartup|Any CPU.Build.0 = Debug|Any CPU
 		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81FDC87-CE74-45C4-B28F-A962A73B0057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

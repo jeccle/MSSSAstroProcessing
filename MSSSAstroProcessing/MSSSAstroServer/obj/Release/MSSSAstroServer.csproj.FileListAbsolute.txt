@@ -1,0 +1,11 @@
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\bin\Release\MSSSAstroServer.exe.config
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\bin\Release\MSSSAstroServer.exe
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\bin\Release\MSSSAstroServer.pdb
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\bin\Release\AstroMath.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\bin\Release\AstroMath.pdb
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.csproj.AssemblyReference.cache
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.csproj.SuggestedBindingRedirects.cache
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.csproj.CoreCompileInputs.cache
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.csproj.CopyComplete
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.exe
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroServer\obj\Release\MSSSAstroServer.pdb
