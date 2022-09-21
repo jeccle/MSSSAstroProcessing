@@ -32,23 +32,23 @@
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.colorDialogBox = new System.Windows.Forms.ColorDialog();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxPreferences = new System.Windows.Forms.GroupBox();
             this.buttonStyle = new System.Windows.Forms.Button();
             this.comboBoxLang = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBoxInput = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBoxControls = new System.Windows.Forms.GroupBox();
+            this.groupBoxHorizon = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numWheelHorizon = new System.Windows.Forms.NumericUpDown();
             this.textBoxHorizon = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBoxKelvin = new System.Windows.Forms.GroupBox();
             this.textBoxKelvin = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxStarVelocity = new System.Windows.Forms.GroupBox();
             this.textBoxObserved = new System.Windows.Forms.TextBox();
             this.textBoxRest = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBoxStarDistance = new System.Windows.Forms.GroupBox();
             this.textBoxDistance = new System.Windows.Forms.TextBox();
             this.listViewDisplay = new System.Windows.Forms.ListView();
             this.recordID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,13 +59,13 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBoxInput.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBoxPreferences.SuspendLayout();
+            this.groupBoxControls.SuspendLayout();
+            this.groupBoxHorizon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWheelHorizon)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBoxKelvin.SuspendLayout();
+            this.groupBoxStarVelocity.SuspendLayout();
+            this.groupBoxStarDistance.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -88,18 +88,18 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // groupBox2
+            // groupBoxPreferences
             // 
-            this.groupBox2.Controls.Add(this.buttonStyle);
-            this.groupBox2.Controls.Add(this.comboBoxLang);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(259, 143);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 46);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "GUI Preferences";
+            this.groupBoxPreferences.Controls.Add(this.buttonStyle);
+            this.groupBoxPreferences.Controls.Add(this.comboBoxLang);
+            this.groupBoxPreferences.Controls.Add(this.label6);
+            this.groupBoxPreferences.Controls.Add(this.label5);
+            this.groupBoxPreferences.Location = new System.Drawing.Point(259, 143);
+            this.groupBoxPreferences.Name = "groupBoxPreferences";
+            this.groupBoxPreferences.Size = new System.Drawing.Size(383, 46);
+            this.groupBoxPreferences.TabIndex = 13;
+            this.groupBoxPreferences.TabStop = false;
+            this.groupBoxPreferences.Text = "GUI Preferences";
             // 
             // buttonStyle
             // 
@@ -114,15 +114,16 @@
             // comboBoxLang
             // 
             this.comboBoxLang.FormattingEnabled = true;
-            this.comboBoxLang.Location = new System.Drawing.Point(277, 16);
+            this.comboBoxLang.Location = new System.Drawing.Point(270, 16);
             this.comboBoxLang.Name = "comboBoxLang";
             this.comboBoxLang.Size = new System.Drawing.Size(100, 21);
             this.comboBoxLang.TabIndex = 3;
+            this.comboBoxLang.TextChanged += new System.EventHandler(this.comboBoxLang_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(210, 21);
+            this.label6.Location = new System.Drawing.Point(203, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 1;
@@ -137,37 +138,37 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Colours:";
             // 
-            // groupBoxInput
+            // groupBoxControls
             // 
-            this.groupBoxInput.Controls.Add(this.groupBox6);
-            this.groupBoxInput.Controls.Add(this.groupBox5);
-            this.groupBoxInput.Controls.Add(this.groupBox3);
-            this.groupBoxInput.Controls.Add(this.groupBox4);
-            this.groupBoxInput.Location = new System.Drawing.Point(12, 7);
-            this.groupBoxInput.Name = "groupBoxInput";
-            this.groupBoxInput.Size = new System.Drawing.Size(241, 150);
-            this.groupBoxInput.TabIndex = 11;
-            this.groupBoxInput.TabStop = false;
-            this.groupBoxInput.Text = "Calculation Input";
+            this.groupBoxControls.Controls.Add(this.groupBoxHorizon);
+            this.groupBoxControls.Controls.Add(this.groupBoxKelvin);
+            this.groupBoxControls.Controls.Add(this.groupBoxStarVelocity);
+            this.groupBoxControls.Controls.Add(this.groupBoxStarDistance);
+            this.groupBoxControls.Location = new System.Drawing.Point(12, 7);
+            this.groupBoxControls.Name = "groupBoxControls";
+            this.groupBoxControls.Size = new System.Drawing.Size(241, 150);
+            this.groupBoxControls.TabIndex = 11;
+            this.groupBoxControls.TabStop = false;
+            this.groupBoxControls.Text = "Calculation Input";
             // 
-            // groupBox6
+            // groupBoxHorizon
             // 
-            this.groupBox6.Controls.Add(this.label2);
-            this.groupBox6.Controls.Add(this.label1);
-            this.groupBox6.Controls.Add(this.numWheelHorizon);
-            this.groupBox6.Controls.Add(this.textBoxHorizon);
-            this.groupBox6.Location = new System.Drawing.Point(6, 70);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(110, 71);
-            this.groupBox6.TabIndex = 12;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Event Horizon";
+            this.groupBoxHorizon.Controls.Add(this.label2);
+            this.groupBoxHorizon.Controls.Add(this.label1);
+            this.groupBoxHorizon.Controls.Add(this.numWheelHorizon);
+            this.groupBoxHorizon.Controls.Add(this.textBoxHorizon);
+            this.groupBoxHorizon.Location = new System.Drawing.Point(6, 70);
+            this.groupBoxHorizon.Name = "groupBoxHorizon";
+            this.groupBoxHorizon.Size = new System.Drawing.Size(110, 71);
+            this.groupBoxHorizon.TabIndex = 12;
+            this.groupBoxHorizon.TabStop = false;
+            this.groupBoxHorizon.Text = "Event Horizon";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(39, 44);
+            this.label2.Location = new System.Drawing.Point(39, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 15);
             this.label2.TabIndex = 8;
@@ -177,7 +178,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(57, 34);
+            this.label1.Location = new System.Drawing.Point(58, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 17);
             this.label1.TabIndex = 7;
@@ -185,7 +186,7 @@
             // 
             // numWheelHorizon
             // 
-            this.numWheelHorizon.Location = new System.Drawing.Point(72, 19);
+            this.numWheelHorizon.Location = new System.Drawing.Point(73, 15);
             this.numWheelHorizon.Maximum = new decimal(new int[] {
             60,
             0,
@@ -202,21 +203,21 @@
             // 
             // textBoxHorizon
             // 
-            this.textBoxHorizon.Location = new System.Drawing.Point(5, 44);
+            this.textBoxHorizon.Location = new System.Drawing.Point(5, 42);
             this.textBoxHorizon.Name = "textBoxHorizon";
             this.textBoxHorizon.Size = new System.Drawing.Size(34, 20);
             this.textBoxHorizon.TabIndex = 5;
             this.textBoxHorizon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // groupBox5
+            // groupBoxKelvin
             // 
-            this.groupBox5.Controls.Add(this.textBoxKelvin);
-            this.groupBox5.Location = new System.Drawing.Point(123, 19);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(110, 45);
-            this.groupBox5.TabIndex = 11;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Celcius to Kelvin";
+            this.groupBoxKelvin.Controls.Add(this.textBoxKelvin);
+            this.groupBoxKelvin.Location = new System.Drawing.Point(123, 19);
+            this.groupBoxKelvin.Name = "groupBoxKelvin";
+            this.groupBoxKelvin.Size = new System.Drawing.Size(110, 45);
+            this.groupBoxKelvin.TabIndex = 11;
+            this.groupBoxKelvin.TabStop = false;
+            this.groupBoxKelvin.Text = "Celcius to Kelvin";
             // 
             // textBoxKelvin
             // 
@@ -226,16 +227,16 @@
             this.textBoxKelvin.TabIndex = 5;
             this.textBoxKelvin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKelvin_KeyPress);
             // 
-            // groupBox3
+            // groupBoxStarVelocity
             // 
-            this.groupBox3.Controls.Add(this.textBoxObserved);
-            this.groupBox3.Controls.Add(this.textBoxRest);
-            this.groupBox3.Location = new System.Drawing.Point(123, 67);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(110, 74);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Star Velocity";
+            this.groupBoxStarVelocity.Controls.Add(this.textBoxObserved);
+            this.groupBoxStarVelocity.Controls.Add(this.textBoxRest);
+            this.groupBoxStarVelocity.Location = new System.Drawing.Point(123, 67);
+            this.groupBoxStarVelocity.Name = "groupBoxStarVelocity";
+            this.groupBoxStarVelocity.Size = new System.Drawing.Size(110, 74);
+            this.groupBoxStarVelocity.TabIndex = 9;
+            this.groupBoxStarVelocity.TabStop = false;
+            this.groupBoxStarVelocity.Text = "Star Velocity";
             // 
             // textBoxObserved
             // 
@@ -255,15 +256,15 @@
             this.textBoxRest.Text = "Rest:";
             this.textBoxRest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // groupBox4
+            // groupBoxStarDistance
             // 
-            this.groupBox4.Controls.Add(this.textBoxDistance);
-            this.groupBox4.Location = new System.Drawing.Point(7, 19);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(110, 45);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Star Distance";
+            this.groupBoxStarDistance.Controls.Add(this.textBoxDistance);
+            this.groupBoxStarDistance.Location = new System.Drawing.Point(7, 19);
+            this.groupBoxStarDistance.Name = "groupBoxStarDistance";
+            this.groupBoxStarDistance.Size = new System.Drawing.Size(110, 45);
+            this.groupBoxStarDistance.TabIndex = 10;
+            this.groupBoxStarDistance.TabStop = false;
+            this.groupBoxStarDistance.Text = "Star Distance";
             // 
             // textBoxDistance
             // 
@@ -329,8 +330,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 218);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBoxInput);
+            this.Controls.Add(this.groupBoxPreferences);
+            this.Controls.Add(this.groupBoxControls);
             this.Controls.Add(this.listViewDisplay);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.statusStrip1);
@@ -340,18 +341,18 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBoxInput.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBoxPreferences.ResumeLayout(false);
+            this.groupBoxPreferences.PerformLayout();
+            this.groupBoxControls.ResumeLayout(false);
+            this.groupBoxHorizon.ResumeLayout(false);
+            this.groupBoxHorizon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWheelHorizon)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBoxKelvin.ResumeLayout(false);
+            this.groupBoxKelvin.PerformLayout();
+            this.groupBoxStarVelocity.ResumeLayout(false);
+            this.groupBoxStarVelocity.PerformLayout();
+            this.groupBoxStarDistance.ResumeLayout(false);
+            this.groupBoxStarDistance.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,23 +363,23 @@
         private System.Windows.Forms.ColorDialog colorDialogBox;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxPreferences;
         private System.Windows.Forms.Button buttonStyle;
         private System.Windows.Forms.ComboBox comboBoxLang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBoxInput;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBoxControls;
+        private System.Windows.Forms.GroupBox groupBoxHorizon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numWheelHorizon;
         private System.Windows.Forms.TextBox textBoxHorizon;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBoxKelvin;
         private System.Windows.Forms.TextBox textBoxKelvin;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxStarVelocity;
         private System.Windows.Forms.TextBox textBoxObserved;
         private System.Windows.Forms.TextBox textBoxRest;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBoxStarDistance;
         private System.Windows.Forms.TextBox textBoxDistance;
         private System.Windows.Forms.ListView listViewDisplay;
         private System.Windows.Forms.ColumnHeader recordID;

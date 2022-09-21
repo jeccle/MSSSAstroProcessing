@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel;
 using System.Threading;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace MSSSAstroClient
@@ -98,6 +99,22 @@ namespace MSSSAstroClient
                 ClearTextBoxes();
             }
         }
+        // possibly add colour presets, aka themes.
+        private void buttonStyle_Click(object sender, EventArgs e)
+        {
+            // Keeps the user from selecting a custom color.
+            colorDialogBox.AllowFullOpen = true;
+            colorDialogBox.FullOpen = true;
+            // Allows the user to get help. (The default is false.)
+            colorDialogBox.ShowHelp = true;
+            // Sets the initial color select to the current text color.
+            colorDialogBox.Color = groupBoxControls.ForeColor;
+            
+            // Update the text box color if the user clicks OK 
+            if (colorDialogBox.ShowDialog() == DialogResult.OK)
+                this.BackColor = groupBoxControls.BackColor = statusStrip1.BackColor = colorDialogBox.Color;
+
+        }
         #endregion
 
         #region Data Checking
@@ -136,7 +153,7 @@ namespace MSSSAstroClient
         /// <returns>Returns a true bool value if a text box contains user input. Else returns a false bool and message.</returns>
         private bool CheckTextBoxContents()
         {
-            foreach (GroupBox grpBox in groupBoxInput.Controls.OfType<GroupBox>())
+            foreach (GroupBox grpBox in groupBoxControls.Controls.OfType<GroupBox>())
                 foreach (TextBox textBox in grpBox.Controls.OfType<TextBox>())
                     if (!string.IsNullOrEmpty(textBox.Text) && !textBox.Text.Equals("Observed:") && !textBox.Text.Equals("Rest:"))
                         return true;
@@ -181,7 +198,7 @@ namespace MSSSAstroClient
         /// </summary>
         private void ClearTextBoxes()
         {
-            foreach (GroupBox grpBox in groupBoxInput.Controls.OfType<GroupBox>())
+            foreach (GroupBox grpBox in groupBoxControls.Controls.OfType<GroupBox>())
                 foreach (TextBox txtBox in grpBox.Controls.OfType<TextBox>())
                     txtBox.Clear();
             textBoxObserved.Text = "Observed:";
@@ -192,24 +209,27 @@ namespace MSSSAstroClient
         /// </summary>
         private void PopulateLangComboBox()
         {
-            string[] languages = new string[] { "eng", "fr-FR", "de-DE" };
+            string[] languages = new string[] { "English | EN", "French | FR", "German | DE" };
             foreach (var lang in languages)
                 comboBoxLang.Items.Add(lang);
         }
+        
         private void ChangeLanguage(string language)
         {
+            ResourceDictionary dict = new ResourceDictionary();
             switch (language)
             {
-                case "English":
+                default:
+                case "English | EN":
                     Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
                     //this.BackgroundImage = Properties.Resources.Flag_of_UK;
                     break;
-                case "French":
+                case "French | FR":
                     Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr-FR");
                     //this.BackgroundImage = Properties.Resources.Flag_of_France;
                     break;
-                case "Spanish":
-                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-ES");
+                case "German | DE":
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
                     //this.BackgroundImage = Properties.Resources.Flag_of_Spain;
                     break;
             }
@@ -251,23 +271,14 @@ namespace MSSSAstroClient
         }
 
 
+        private void comboBoxLang_TextChanged(object sender, EventArgs e)
+        {
+            ChangeLanguage(comboBoxLang.Text);
+        }
 
 
         #endregion
 
-        private void buttonStyle_Click(object sender, EventArgs e)
-        {
-            // Keeps the user from selecting a custom color.
-            colorDialogBox.AllowFullOpen = true;
-            // Allows the user to get help. (The default is false.)
-            colorDialogBox.ShowHelp = true;
-            // Sets the initial color select to the current text color.
-            colorDialogBox.Color = groupBoxInput.ForeColor;
 
-            // Update the text box color if the user clicks OK 
-            if (colorDialogBox.ShowDialog() == DialogResult.OK)
-                this.BackColor = groupBoxInput.BackColor = statusStrip1.BackColor =  colorDialogBox.Color;
-            
-        }
     }
 }

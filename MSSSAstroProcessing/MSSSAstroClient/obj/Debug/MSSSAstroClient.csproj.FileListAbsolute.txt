@@ -31,3 +31,4 @@ J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessin
 J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.csproj.CoreCompileInputs.cache
 J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.exe
 J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.pdb
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.Resources.StringsEN.resources
