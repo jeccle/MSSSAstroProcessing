@@ -20,7 +20,9 @@ namespace AstroMath
         }
 
         /// <summary>
-        /// Measures distance of a star using the parallax angle which is the angle measured at two different points
+        /// Measures star distance using the parallax angle which is the angle that is measured from two separate points to return
+        /// a parsec value that describes the distance between the stars.
+        /// This method works on nearby stars that have a defined Parallax angle.
         /// </summary>
         /// <param name="a">Paralax angle</param>
         /// <returns>Distance of a start in parsecs</returns>
@@ -30,20 +32,22 @@ namespace AstroMath
         }
 
         /// <summary>
-        /// 
+        /// COnverts celcius values to the main scienctific temperature measurement. Method will take celcius input and convert it to
+        /// its kelvin equivalent.
         /// </summary>
-        /// <param name="c"></param>
-        /// <returns></returns>
+        /// <param name="c">Temperature in celcius.</param>
+        /// <returns>Temperature in Kelvin</returns>
         public double TempKelvin(double c)
         {
             return c + 273;
         }
 
         /// <summary>
-        /// 
+        /// Describes the distance of the event horizon from the center core of the blackhole. Mass of the blackhole is specified to return
+        /// a calculation describing the size of the event horizon.
         /// </summary>
-        /// <param name="m"></param>
-        /// <returns></returns>
+        /// <param name="m">Mass of Blackhole</param>
+        /// <returns>Distance of the event horizon from blackhole core.</returns>
         public double EventHorizon(double m)
         {
             double c = 2.9979458 * Math.Pow(10, 8);
