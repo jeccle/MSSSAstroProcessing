@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using System.ServiceModel;
-using System.ServiceModel.Channels;
 using System.Threading;
-using System.Windows;
 using System.Windows.Forms;
 
 namespace MSSSAstroClient
@@ -42,7 +39,7 @@ namespace MSSSAstroClient
             }
             catch
             {
-                StatusMessage(CultureInfo.CurrentUICulture.ToString(), "connError");                                                                                    Trace.WriteLine("Connection failed.");
+                StatusMessage("connError");                                                                                    Trace.WriteLine("Connection failed.");
                 return null;
             }
         }
@@ -101,7 +98,7 @@ namespace MSSSAstroClient
                                             // If a value was successful it is added to the list of values.
                     calcList.Add(infoStr);
                     DisplayCalculations();
-                    StatusMessage(CultureInfo.CurrentUICulture.ToString(), "calcSuccess");
+                    StatusMessage("calcSuccess");
                     
                 }
                 ClearTextBoxes();
@@ -110,6 +107,7 @@ namespace MSSSAstroClient
         // possibly add colour presets, aka themes.
         /// <summary>
         /// Adds colour picker control to change the colour of the form.
+        /// Form text color is altered to contrast the background color.
         /// </summary>
         private void buttonStyle_Click(object sender, EventArgs e)
         {
@@ -120,20 +118,28 @@ namespace MSSSAstroClient
             colorDialogBox.ShowHelp = true;
             // Sets the initial color select to the current text color.
             colorDialogBox.Color = groupBoxControls.ForeColor;
-            
+
             // Update the text box color if the user clicks OK 
             if (colorDialogBox.ShowDialog() == DialogResult.OK)
                 this.BackColor = groupBoxControls.BackColor = statusStrip1.BackColor = colorDialogBox.Color;
 
-            //if(colorDialogBox.Color
+            if (colorDialogBox.Color.R < 127 || colorDialogBox.Color.G < 127 || colorDialogBox.Color.B < 127)   // Could do with some improvements
+            {
+                SetTextColour("light");
+            }
+            else
+                SetTextColour("dark");
+            
+
         }
         /// <summary>
-        /// Determines the current used language and uses switch case to output appropriate status lable caption asscoiated with that language.
+        /// Determines the current used language and uses switch case to output a specific messageType to the status lable in the asscoiated language.
         /// </summary>
         /// <param name="lang">CultureInfo Culture language type.</param>
         /// <param name="messageType">Type of status strip message.</param>
-        private void StatusMessage(string lang, string messageType)
+        private void StatusMessage(string messageType)
         {
+            string lang = CultureInfo.CurrentUICulture.ToString();
             switch (messageType)
             {
                 case "connError":
@@ -143,10 +149,10 @@ namespace MSSSAstroClient
                             statusLabel.Text = "Connection failed.";
                             break;
                         case "fr":
-                            statusLabel.Text = "La connexion a échoué";
+                            statusLabel.Text = "La connexion a échoué.";
                             break;
                         case "de":
-                            statusLabel.Text = "Verbindung fehlgeschlagen";
+                            statusLabel.Text = "Verbindung fehlgeschlagen.";
                             break;
                     }
                     break;
@@ -154,28 +160,28 @@ namespace MSSSAstroClient
                     switch (lang)
                     {
                         case "en":
-                            statusLabel.Text = "Calculation Successful";
+                            statusLabel.Text = "Calculation Successful.";
                             break;
                         case "fr":
-                            statusLabel.Text = "Connexion réussie";
+                            statusLabel.Text = "Connexion réussie.";
                             break;
                         case "de":
-                            statusLabel.Text = "Berechnung erfolgreich";
+                            statusLabel.Text = "Berechnung erfolgreich.";
                             break;
                     }
                     break;
                 case "formatError":
-                    
+
                     switch (lang)
                     {
                         case "en":
-                            statusLabel.Text = "Incorrect input format! | Enter numeric values.";
+                            statusLabel.Text = "Incorrect input format. | Enter numeric values.";
                             break;
                         case "fr":
-                            statusLabel.Text = "Format d'entrée incorrect! | Saisissez des valeurs numériques.";
+                            statusLabel.Text = "Format d'entrée incorrect. | Saisissez des valeurs numériques.";
                             break;
                         case "de":
-                            statusLabel.Text = "Falsches Eingabeformat! | Geben Sie numerische Werte ein.";
+                            statusLabel.Text = "Falsches Eingabeformat. | Geben Sie numerische Werte ein.";
                             break;
                     }
                     break;
@@ -183,13 +189,55 @@ namespace MSSSAstroClient
                     switch (lang)
                     {
                         case "en":
-                            statusLabel.Text = "No input!";
+                            statusLabel.Text = "Incorrect input.";
                             break;
                         case "fr":
-                            statusLabel.Text = "Pas d'entrée";
+                            statusLabel.Text = "Erreur d'entrée.";
                             break;
                         case "de":
-                            statusLabel.Text = "Keine Eingabe";
+                            statusLabel.Text = "Eingabe Fehler.";
+                            break;
+                    }
+                    break;
+                case "noInputError":
+                    switch (lang)
+                    {
+                        case "en":
+                            statusLabel.Text = "No input.";
+                            break;
+                        case "fr":
+                            statusLabel.Text = "Pas d'entrée.";
+                            break;
+                        case "de":
+                            statusLabel.Text = "Keine Eingabe.";
+                            break;
+                    }
+                    break;
+                case "colourChanged":
+                    switch (lang)
+                    {
+                        case "en":
+                            statusLabel.Text = "Colours have been changed.";
+                            break;
+                        case "fr":
+                            statusLabel.Text = "Les couleurs ont été changées.";
+                            break;
+                        case "de":
+                            statusLabel.Text = "Farben wurden geändert.";
+                            break;
+                    }
+                    break;
+                case "incorrectChar":
+                    switch (lang)
+                    {
+                        case "en":
+                            statusLabel.Text = "Enter Numeric Values Only.";
+                            break;
+                        case "fr":
+                            statusLabel.Text = "Saisir uniquement des valeurs numériques.";
+                            break;
+                        case "de":
+                            statusLabel.Text = "Geben Sie nur numerische Werte ein.";
                             break;
                     }
                     break;
@@ -207,7 +255,13 @@ namespace MSSSAstroClient
         {
             if (value.Equals("None,None,None,None"))
             {
-                StatusMessage(CultureInfo.CurrentUICulture.ToString(), "formatError");                                                                                  Trace.WriteLine("Input is null. Input: " + value);
+                StatusMessage("formatError");                                                                                  Trace.WriteLine("Input is null. Input: " + value);
+                ClearTextBoxes();
+                return true;
+            } 
+            else if (value.Equals("None,None,Null,None"))
+            {
+                StatusMessage("inputError");                                                                                   Trace.WriteLine("Input is null. Input: " + value);
                 ClearTextBoxes();
                 return true;
             }
@@ -245,7 +299,7 @@ namespace MSSSAstroClient
                     else
                         continue;
 
-            StatusMessage(CultureInfo.CurrentUICulture.ToString(), "inputError");                                                                                       Trace.WriteLine("No input found.");
+            StatusMessage("noInputError");                                                                                       Trace.WriteLine("No input found.");
             return false;
         }
         /// <summary>
@@ -279,13 +333,19 @@ namespace MSSSAstroClient
                     result = value.ToString("#.##" + " parsecs");
                     break;
                 case "horizon":
-                    result = value.ToString("#.#") + "e-10 m";
+                    result = value.ToString("F6") + "e-10m";
                     break;
                 case "kelvin":
+                    if (value < 0)
+                    {
+                        StatusMessage("inputError");
+                        result = "Null";
+                        break;
+                    }
                     result = value + " K";
                     break;
                 case "velocity":
-                    result = value.ToString("#.##") + " V";
+                    result = value.ToString("#.##") + " m/s";
                     break;
                 default:
                     break;
@@ -295,6 +355,33 @@ namespace MSSSAstroClient
         #endregion
 
         #region Form Utility
+        /// <summary>
+        /// Sets the text for each of the controls to a light or dark mode.
+        /// Changes text to black if the colour is lighter, and changes text to white if the colour is darker.
+        /// </summary>
+        /// <param name="mode"></param>
+        private void SetTextColour(string mode)
+        {
+            var color = new System.Drawing.Color();
+            if (mode == "light")
+                color = System.Drawing.Color.White;
+            else
+                color = System.Drawing.Color.Black;
+
+            foreach (GroupBox grpBox in this.Controls.OfType<GroupBox>())
+            {
+                grpBox.ForeColor = color;
+                foreach (GroupBox subGrpBox in grpBox.Controls.OfType<GroupBox>())
+                {
+                    subGrpBox.ForeColor = color;
+                    foreach (Label label in subGrpBox.Controls.OfType<Label>())
+                        label.ForeColor = color;
+                }
+                foreach (Label label in grpBox.Controls.OfType<Label>())
+                    label.ForeColor = color;
+            }
+            buttonStyle.ForeColor = System.Drawing.Color.Black;
+        }
         /// <summary>
         /// Iterates through each of the controls inside the main groupBox.
         /// </summary>
@@ -376,6 +463,9 @@ namespace MSSSAstroClient
             // Enable backspace
             if (e.KeyChar == (char)Keys.Back)
                 e.Handled = false;
+
+            if (e.Handled)
+                StatusMessage("incorrectChar");
         }
         /// <summary>
         /// Keypress event restricts input text boxes to contain only numeric values and '.'.
@@ -395,9 +485,12 @@ namespace MSSSAstroClient
             if (!(sender as TextBox).Text.StartsWith("-") && e.KeyChar == '-' && string.IsNullOrEmpty((sender as TextBox).Text)) // Checks if beginning characters represent negative value.
                 e.Handled = true;                                                                                                // Handled if it doesn't start with a negative operator.
 
-            if (e.KeyChar == '-' && !(sender as TextBox).Text.StartsWith("-") && !char.IsDigit(e.KeyChar) && (sender as TextBox).Text.IndexOf('-') < -1 // Of
-                || (string.IsNullOrEmpty((sender as TextBox).Text)) && (e.KeyChar == '-'))      // If textBox doesn't contain a '-' at the start and '-' is not within the string                    
+            if ((string.IsNullOrEmpty((sender as TextBox).Text)) && (e.KeyChar == '-'))      // If textBox doesn't contain a '-' at the start and '-' is not within the string                    
                 e.Handled = false;                                                              // If empty string minus sign is entered
+
+            if (e.Handled)
+                StatusMessage("incorrectChar");
+
         }
         /// <summary>
         /// Set default language on load.

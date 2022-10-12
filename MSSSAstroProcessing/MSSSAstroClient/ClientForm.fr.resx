@@ -124,11 +124,35 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>702, 218</value>
   </data>
+  <data name="groupBoxPreferences.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 46</value>
+  </data>
+  <data name="groupBoxPreferences.Text" xml:space="preserve">
+    <value>Préférences de l'interface graphique</value>
+  </data>
+  <data name="groupBoxControls.Text" xml:space="preserve">
+    <value>Entrée de calcul</value>
+  </data>
+  <data name="listViewDisplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 129</value>
+  </data>
+  <data name="buttonCalculate.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="buttonCalculate.ToolTip" xml:space="preserve">
+    <value>Lancer le calcul</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MSSS Astro Client </value>
+  </data>
   <data name="buttonStyle.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 17</value>
   </data>
   <data name="buttonStyle.Text" xml:space="preserve">
     <value>Changer le style</value>
+  </data>
+  <data name="buttonStyle.ToolTip" xml:space="preserve">
+    <value>Changer la couleur du client</value>
   </data>
   <data name="comboBoxLang.Items" xml:space="preserve">
     <value>Anglais | EN</value>
@@ -145,6 +169,9 @@
   <data name="comboBoxLang.Text" xml:space="preserve">
     <value>Français | FR</value>
   </data>
+  <data name="comboBoxLang.ToolTip" xml:space="preserve">
+    <value>Changer de langue</value>
+  </data>
   <data name="labelLanguage.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 21</value>
   </data>
@@ -160,29 +187,44 @@
   <data name="labelColours.Text" xml:space="preserve">
     <value>Couleurs:</value>
   </data>
-  <data name="groupBoxPreferences.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 46</value>
-  </data>
-  <data name="groupBoxPreferences.Text" xml:space="preserve">
-    <value>Préférences de l'interface graphique</value>
-  </data>
   <data name="groupBoxHorizon.Text" xml:space="preserve">
     <value>Horizon des événements</value>
+  </data>
+  <data name="groupBoxHorizon.ToolTip" xml:space="preserve">
+    <value>Calcule le rayon de Schwarzchild en mètres (la distance entre le centre d'un trou noir et l'horizon des événements).</value>
+  </data>
+  <data name="numWheelHorizon.ToolTip" xml:space="preserve">
+    <value>Multiplicateur minimum de 32</value>
+  </data>
+  <data name="textBoxHorizon.ToolTip" xml:space="preserve">
+    <value>Entrez la masse du trou noir en kg</value>
   </data>
   <data name="groupBoxKelvin.Text" xml:space="preserve">
     <value>Celsius à Kelvin</value>
   </data>
-  <data name="textBoxObserved.Text" xml:space="preserve">
-    <value>Observé:</value>
+  <data name="groupBoxKelvin.ToolTip" xml:space="preserve">
+    <value>Convertit Celsius en Kelvin</value>
   </data>
-  <data name="textBoxRest.Text" xml:space="preserve">
-    <value>Repos:</value>
+  <data name="textBoxKelvin.ToolTip" xml:space="preserve">
+    <value>Entrez la valeur Celsius</value>
   </data>
   <data name="groupBoxStarVelocity.Text" xml:space="preserve">
     <value>Vitesse des étoiles</value>
   </data>
-  <data name="textBoxDistance.ToolTip" xml:space="preserve">
-    <value>Entrez l'angle des secondes d'arc</value>
+  <data name="groupBoxStarVelocity.ToolTip" xml:space="preserve">
+    <value>Mesurer la vitesse des étoiles à l'aide du décalage Doppler</value>
+  </data>
+  <data name="textBoxObserved.Text" xml:space="preserve">
+    <value>Observé:</value>
+  </data>
+  <data name="textBoxObserved.ToolTip" xml:space="preserve">
+    <value>Entrer la longueur d'onde observée</value>
+  </data>
+  <data name="textBoxRest.Text" xml:space="preserve">
+    <value>Repos:</value>
+  </data>
+  <data name="textBoxRest.ToolTip" xml:space="preserve">
+    <value>Entrer la longueur d'onde au repos</value>
   </data>
   <data name="groupBoxStarDistance.Text" xml:space="preserve">
     <value>Distance étoile</value>
@@ -190,8 +232,8 @@
   <data name="groupBoxStarDistance.ToolTip" xml:space="preserve">
     <value>Calcule la distance en parsecs.</value>
   </data>
-  <data name="groupBoxControls.Text" xml:space="preserve">
-    <value>Entrée de calcul</value>
+  <data name="textBoxDistance.ToolTip" xml:space="preserve">
+    <value>Entrez l'angle des secondes d'arc</value>
   </data>
   <data name="columnStarVelocity.Text" xml:space="preserve">
     <value>Vitesse des étoiles</value>
@@ -208,14 +250,5 @@
   </data>
   <data name="columnEventHorizon.Width" type="System.Int32, mscorlib">
     <value>133</value>
-  </data>
-  <data name="listViewDisplay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 129</value>
-  </data>
-  <data name="buttonCalculate.Text" xml:space="preserve">
-    <value>Calculer</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>MSSS Astro Client </value>
   </data>
 </root>

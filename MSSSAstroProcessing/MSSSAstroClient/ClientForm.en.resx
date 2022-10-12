@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="buttonStyle.ToolTip" xml:space="preserve">
-    <value>Change application colours.</value>
+    <value>Change Client Colours.</value>
   </data>
   <data name="comboBoxLang.Text" xml:space="preserve">
     <value>English | EN</value>
@@ -129,14 +129,11 @@
   <data name="textBoxHorizon.ToolTip" xml:space="preserve">
     <value>Enter mass of a black hole.</value>
   </data>
-  <data name="groupBoxHorizon.ToolTip" xml:space="preserve">
-    <value>Calculate the distance from the centre of a blackhole to the event horizon.</value>
-  </data>
   <data name="textBoxKelvin.ToolTip" xml:space="preserve">
     <value>Converts Celcius values to Kelvin.</value>
   </data>
   <data name="buttonCalculate.ToolTip" xml:space="preserve">
-    <value>Initializes calculations based on filled Text Boxes.</value>
+    <value>Initializes Calculations</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>MSSS Astro Client</value>

@@ -42,3 +42,12 @@ D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessin
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\en\MSSSAstroClient.resources.dll
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.ClientForm.en.resources
 D:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\en\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\de\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\en\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\bin\Debug\fr\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.ClientForm.de.resources
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.ClientForm.en.resources
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\MSSSAstroClient.ClientForm.fr.resources
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\de\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\en\MSSSAstroClient.resources.dll
+J:\_Sem3\Complex Data Structures\AT2\MalinSpaceScienceSystems\MSSSAstroProcessing\MSSSAstroClient\obj\Debug\fr\MSSSAstroClient.resources.dll
