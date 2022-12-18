@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientForm));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.colorDialogBox = new System.Windows.Forms.ColorDialog();
@@ -35,10 +37,11 @@
             this.groupBoxPreferences = new System.Windows.Forms.GroupBox();
             this.buttonStyle = new System.Windows.Forms.Button();
             this.comboBoxLang = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelLanguage = new System.Windows.Forms.Label();
+            this.labelColours = new System.Windows.Forms.Label();
             this.groupBoxControls = new System.Windows.Forms.GroupBox();
             this.groupBoxHorizon = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numWheelHorizon = new System.Windows.Forms.NumericUpDown();
@@ -57,6 +60,7 @@
             this.columnKelvin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnEventHorizon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonCalculate = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.groupBoxPreferences.SuspendLayout();
@@ -70,18 +74,16 @@
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 196);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(654, 22);
-            this.statusStrip1.TabIndex = 7;
-            this.statusStrip1.Text = "statusStrip1";
+            this.toolTip.SetToolTip(this.statusStrip1, resources.GetString("statusStrip1.ToolTip"));
             // 
             // statusLabel
             // 
+            resources.ApplyResources(this.statusLabel, "statusLabel");
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // fileSystemWatcher1
             // 
@@ -90,111 +92,103 @@
             // 
             // groupBoxPreferences
             // 
+            resources.ApplyResources(this.groupBoxPreferences, "groupBoxPreferences");
             this.groupBoxPreferences.Controls.Add(this.buttonStyle);
             this.groupBoxPreferences.Controls.Add(this.comboBoxLang);
-            this.groupBoxPreferences.Controls.Add(this.label6);
-            this.groupBoxPreferences.Controls.Add(this.label5);
-            this.groupBoxPreferences.Location = new System.Drawing.Point(259, 143);
+            this.groupBoxPreferences.Controls.Add(this.labelLanguage);
+            this.groupBoxPreferences.Controls.Add(this.labelColours);
             this.groupBoxPreferences.Name = "groupBoxPreferences";
-            this.groupBoxPreferences.Size = new System.Drawing.Size(383, 46);
-            this.groupBoxPreferences.TabIndex = 13;
             this.groupBoxPreferences.TabStop = false;
-            this.groupBoxPreferences.Text = "GUI Preferences";
+            this.toolTip.SetToolTip(this.groupBoxPreferences, resources.GetString("groupBoxPreferences.ToolTip"));
             // 
             // buttonStyle
             // 
-            this.buttonStyle.Location = new System.Drawing.Point(57, 16);
+            resources.ApplyResources(this.buttonStyle, "buttonStyle");
             this.buttonStyle.Name = "buttonStyle";
-            this.buttonStyle.Size = new System.Drawing.Size(100, 23);
-            this.buttonStyle.TabIndex = 4;
-            this.buttonStyle.Text = "Change Style";
+            this.toolTip.SetToolTip(this.buttonStyle, resources.GetString("buttonStyle.ToolTip"));
             this.buttonStyle.UseVisualStyleBackColor = true;
             this.buttonStyle.Click += new System.EventHandler(this.buttonStyle_Click);
             // 
             // comboBoxLang
             // 
+            resources.ApplyResources(this.comboBoxLang, "comboBoxLang");
             this.comboBoxLang.FormattingEnabled = true;
-            this.comboBoxLang.Location = new System.Drawing.Point(270, 16);
+            this.comboBoxLang.Items.AddRange(new object[] {
+            resources.GetString("comboBoxLang.Items"),
+            resources.GetString("comboBoxLang.Items1"),
+            resources.GetString("comboBoxLang.Items2")});
             this.comboBoxLang.Name = "comboBoxLang";
-            this.comboBoxLang.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxLang.TabIndex = 3;
-            this.comboBoxLang.TextChanged += new System.EventHandler(this.comboBoxLang_TextChanged);
+            this.toolTip.SetToolTip(this.comboBoxLang, resources.GetString("comboBoxLang.ToolTip"));
+            this.comboBoxLang.SelectedIndexChanged += new System.EventHandler(this.comboBoxLang_TextChanged);
             // 
-            // label6
+            // labelLanguage
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(203, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Language: ";
+            resources.ApplyResources(this.labelLanguage, "labelLanguage");
+            this.labelLanguage.Name = "labelLanguage";
+            this.toolTip.SetToolTip(this.labelLanguage, resources.GetString("labelLanguage.ToolTip"));
             // 
-            // label5
+            // labelColours
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Colours:";
+            resources.ApplyResources(this.labelColours, "labelColours");
+            this.labelColours.Name = "labelColours";
+            this.toolTip.SetToolTip(this.labelColours, resources.GetString("labelColours.ToolTip"));
             // 
             // groupBoxControls
             // 
+            resources.ApplyResources(this.groupBoxControls, "groupBoxControls");
             this.groupBoxControls.Controls.Add(this.groupBoxHorizon);
             this.groupBoxControls.Controls.Add(this.groupBoxKelvin);
             this.groupBoxControls.Controls.Add(this.groupBoxStarVelocity);
             this.groupBoxControls.Controls.Add(this.groupBoxStarDistance);
-            this.groupBoxControls.Location = new System.Drawing.Point(12, 7);
             this.groupBoxControls.Name = "groupBoxControls";
-            this.groupBoxControls.Size = new System.Drawing.Size(241, 150);
-            this.groupBoxControls.TabIndex = 11;
             this.groupBoxControls.TabStop = false;
-            this.groupBoxControls.Text = "Calculation Input";
+            this.toolTip.SetToolTip(this.groupBoxControls, resources.GetString("groupBoxControls.ToolTip"));
             // 
             // groupBoxHorizon
             // 
+            resources.ApplyResources(this.groupBoxHorizon, "groupBoxHorizon");
+            this.groupBoxHorizon.Controls.Add(this.label3);
             this.groupBoxHorizon.Controls.Add(this.label2);
             this.groupBoxHorizon.Controls.Add(this.label1);
             this.groupBoxHorizon.Controls.Add(this.numWheelHorizon);
             this.groupBoxHorizon.Controls.Add(this.textBoxHorizon);
-            this.groupBoxHorizon.Location = new System.Drawing.Point(6, 70);
             this.groupBoxHorizon.Name = "groupBoxHorizon";
-            this.groupBoxHorizon.Size = new System.Drawing.Size(110, 71);
-            this.groupBoxHorizon.TabIndex = 12;
             this.groupBoxHorizon.TabStop = false;
-            this.groupBoxHorizon.Text = "Event Horizon";
+            this.toolTip.SetToolTip(this.groupBoxHorizon, resources.GetString("groupBoxHorizon.ToolTip"));
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.toolTip.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(39, 43);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "* 10";
+            this.toolTip.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(58, 32);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "^";
+            this.toolTip.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // numWheelHorizon
             // 
-            this.numWheelHorizon.Location = new System.Drawing.Point(73, 15);
+            resources.ApplyResources(this.numWheelHorizon, "numWheelHorizon");
             this.numWheelHorizon.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
+            this.numWheelHorizon.Minimum = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
             this.numWheelHorizon.Name = "numWheelHorizon";
-            this.numWheelHorizon.Size = new System.Drawing.Size(33, 20);
-            this.numWheelHorizon.TabIndex = 6;
+            this.toolTip.SetToolTip(this.numWheelHorizon, resources.GetString("numWheelHorizon.ToolTip"));
             this.numWheelHorizon.Value = new decimal(new int[] {
             36,
             0,
@@ -203,79 +197,69 @@
             // 
             // textBoxHorizon
             // 
-            this.textBoxHorizon.Location = new System.Drawing.Point(5, 42);
+            resources.ApplyResources(this.textBoxHorizon, "textBoxHorizon");
             this.textBoxHorizon.Name = "textBoxHorizon";
-            this.textBoxHorizon.Size = new System.Drawing.Size(34, 20);
-            this.textBoxHorizon.TabIndex = 5;
+            this.toolTip.SetToolTip(this.textBoxHorizon, resources.GetString("textBoxHorizon.ToolTip"));
             this.textBoxHorizon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBoxKelvin
             // 
+            resources.ApplyResources(this.groupBoxKelvin, "groupBoxKelvin");
             this.groupBoxKelvin.Controls.Add(this.textBoxKelvin);
-            this.groupBoxKelvin.Location = new System.Drawing.Point(123, 19);
             this.groupBoxKelvin.Name = "groupBoxKelvin";
-            this.groupBoxKelvin.Size = new System.Drawing.Size(110, 45);
-            this.groupBoxKelvin.TabIndex = 11;
             this.groupBoxKelvin.TabStop = false;
-            this.groupBoxKelvin.Text = "Celcius to Kelvin";
+            this.toolTip.SetToolTip(this.groupBoxKelvin, resources.GetString("groupBoxKelvin.ToolTip"));
             // 
             // textBoxKelvin
             // 
-            this.textBoxKelvin.Location = new System.Drawing.Point(5, 18);
+            resources.ApplyResources(this.textBoxKelvin, "textBoxKelvin");
             this.textBoxKelvin.Name = "textBoxKelvin";
-            this.textBoxKelvin.Size = new System.Drawing.Size(100, 20);
-            this.textBoxKelvin.TabIndex = 5;
+            this.toolTip.SetToolTip(this.textBoxKelvin, resources.GetString("textBoxKelvin.ToolTip"));
             this.textBoxKelvin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxKelvin_KeyPress);
             // 
             // groupBoxStarVelocity
             // 
+            resources.ApplyResources(this.groupBoxStarVelocity, "groupBoxStarVelocity");
             this.groupBoxStarVelocity.Controls.Add(this.textBoxObserved);
             this.groupBoxStarVelocity.Controls.Add(this.textBoxRest);
-            this.groupBoxStarVelocity.Location = new System.Drawing.Point(123, 67);
             this.groupBoxStarVelocity.Name = "groupBoxStarVelocity";
-            this.groupBoxStarVelocity.Size = new System.Drawing.Size(110, 74);
-            this.groupBoxStarVelocity.TabIndex = 9;
             this.groupBoxStarVelocity.TabStop = false;
-            this.groupBoxStarVelocity.Text = "Star Velocity";
+            this.toolTip.SetToolTip(this.groupBoxStarVelocity, resources.GetString("groupBoxStarVelocity.ToolTip"));
             // 
             // textBoxObserved
             // 
-            this.textBoxObserved.Location = new System.Drawing.Point(5, 17);
+            resources.ApplyResources(this.textBoxObserved, "textBoxObserved");
             this.textBoxObserved.Name = "textBoxObserved";
-            this.textBoxObserved.Size = new System.Drawing.Size(100, 20);
-            this.textBoxObserved.TabIndex = 1;
-            this.textBoxObserved.Text = "Observed:";
+            this.toolTip.SetToolTip(this.textBoxObserved, resources.GetString("textBoxObserved.ToolTip"));
+            this.textBoxObserved.Enter += new System.EventHandler(this.textBox_Enter);
             this.textBoxObserved.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // textBoxRest
             // 
-            this.textBoxRest.Location = new System.Drawing.Point(5, 45);
+            resources.ApplyResources(this.textBoxRest, "textBoxRest");
             this.textBoxRest.Name = "textBoxRest";
-            this.textBoxRest.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRest.TabIndex = 4;
-            this.textBoxRest.Text = "Rest:";
+            this.toolTip.SetToolTip(this.textBoxRest, resources.GetString("textBoxRest.ToolTip"));
+            this.textBoxRest.Enter += new System.EventHandler(this.textBox_Enter);
             this.textBoxRest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // groupBoxStarDistance
             // 
+            resources.ApplyResources(this.groupBoxStarDistance, "groupBoxStarDistance");
             this.groupBoxStarDistance.Controls.Add(this.textBoxDistance);
-            this.groupBoxStarDistance.Location = new System.Drawing.Point(7, 19);
             this.groupBoxStarDistance.Name = "groupBoxStarDistance";
-            this.groupBoxStarDistance.Size = new System.Drawing.Size(110, 45);
-            this.groupBoxStarDistance.TabIndex = 10;
             this.groupBoxStarDistance.TabStop = false;
-            this.groupBoxStarDistance.Text = "Star Distance";
+            this.toolTip.SetToolTip(this.groupBoxStarDistance, resources.GetString("groupBoxStarDistance.ToolTip"));
             // 
             // textBoxDistance
             // 
-            this.textBoxDistance.Location = new System.Drawing.Point(5, 17);
+            resources.ApplyResources(this.textBoxDistance, "textBoxDistance");
             this.textBoxDistance.Name = "textBoxDistance";
-            this.textBoxDistance.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDistance.TabIndex = 5;
+            this.toolTip.SetToolTip(this.textBoxDistance, resources.GetString("textBoxDistance.ToolTip"));
             this.textBoxDistance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // listViewDisplay
             // 
+            resources.ApplyResources(this.listViewDisplay, "listViewDisplay");
             this.listViewDisplay.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.recordID,
             this.columnStarVelocity,
@@ -283,60 +267,50 @@
             this.columnKelvin,
             this.columnEventHorizon});
             this.listViewDisplay.HideSelection = false;
-            this.listViewDisplay.Location = new System.Drawing.Point(259, 12);
             this.listViewDisplay.Name = "listViewDisplay";
-            this.listViewDisplay.Size = new System.Drawing.Size(383, 129);
-            this.listViewDisplay.TabIndex = 12;
+            this.toolTip.SetToolTip(this.listViewDisplay, resources.GetString("listViewDisplay.ToolTip"));
             this.listViewDisplay.UseCompatibleStateImageBehavior = false;
             this.listViewDisplay.View = System.Windows.Forms.View.Details;
             // 
             // recordID
             // 
-            this.recordID.Text = "ID";
-            this.recordID.Width = 28;
+            resources.ApplyResources(this.recordID, "recordID");
             // 
             // columnStarVelocity
             // 
-            this.columnStarVelocity.Text = "Star Velocity";
-            this.columnStarVelocity.Width = 85;
+            resources.ApplyResources(this.columnStarVelocity, "columnStarVelocity");
             // 
             // columnStarDistances
             // 
-            this.columnStarDistances.Text = "Star Distance";
-            this.columnStarDistances.Width = 94;
+            resources.ApplyResources(this.columnStarDistances, "columnStarDistances");
             // 
             // columnKelvin
             // 
-            this.columnKelvin.Text = "Kelvin";
-            this.columnKelvin.Width = 65;
+            resources.ApplyResources(this.columnKelvin, "columnKelvin");
             // 
             // columnEventHorizon
             // 
-            this.columnEventHorizon.Text = "Event Horizon";
-            this.columnEventHorizon.Width = 103;
+            resources.ApplyResources(this.columnEventHorizon, "columnEventHorizon");
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(12, 161);
+            resources.ApplyResources(this.buttonCalculate, "buttonCalculate");
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(241, 28);
-            this.buttonCalculate.TabIndex = 10;
-            this.buttonCalculate.Text = "Calculate";
+            this.toolTip.SetToolTip(this.buttonCalculate, resources.GetString("buttonCalculate.ToolTip"));
             this.buttonCalculate.UseVisualStyleBackColor = true;
             this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 218);
             this.Controls.Add(this.groupBoxPreferences);
             this.Controls.Add(this.groupBoxControls);
             this.Controls.Add(this.listViewDisplay);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.statusStrip1);
             this.Name = "ClientForm";
-            this.Text = "Malin Space Science Systems Astro Client";
+            this.toolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.ClientForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -366,8 +340,8 @@
         private System.Windows.Forms.GroupBox groupBoxPreferences;
         private System.Windows.Forms.Button buttonStyle;
         private System.Windows.Forms.ComboBox comboBoxLang;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelLanguage;
+        private System.Windows.Forms.Label labelColours;
         private System.Windows.Forms.GroupBox groupBoxControls;
         private System.Windows.Forms.GroupBox groupBoxHorizon;
         private System.Windows.Forms.Label label2;
@@ -388,6 +362,8 @@
         private System.Windows.Forms.ColumnHeader columnKelvin;
         private System.Windows.Forms.ColumnHeader columnEventHorizon;
         private System.Windows.Forms.Button buttonCalculate;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label label3;
     }
 }
 
